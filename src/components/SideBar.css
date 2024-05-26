@@ -1,0 +1,101 @@
+.Chart {
+    margin-left: 22px;
+    margin-top: -15px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    /* Expanded width */
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 48px 0 0;
+    background-color: #141b2d;
+    /* bg-gradient-info */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar.isCollapsed {
+    width: 80px;
+    /* Collapsed width */
+    background-color: #343a40;
+    /* Darker color when collapsed */
+}
+
+.sidebar .sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: width 0.3s ease;
+}
+
+.sidebar.isCollapsed .sidebar-brand {
+    width: 80px;
+}
+
+.sidebar .sidebar-brand .sidebar-brand-icon {
+    transition: margin-right 0.3s ease;
+}
+
+.sidebar.isCollapsed .sidebar-brand .sidebar-brand-icon {
+    margin-right: 0;
+}
+
+.sidebar .sidebar-brand .sidebar-brand-text {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.isCollapsed .sidebar-brand .sidebar-brand-text {
+    opacity: 0;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar.isCollapsed .nav-link span {
+    display: none;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 35px;
+    left: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    transition: left 0.3s ease;
+    background-color: #141b2d;
+}
+
+.sidebar-brand-text {
+    margin-top: -50px;
+}
+
+.sidebar.isCollapsed+.toggle-button {
+    left: 10px;
+}
+
+.toggle-button i {
+    font-size: 24px;
+}
+
+#page-content-wrapper {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+}
+
+#page-content-wrapper.collapsed {
+    margin-left: 80px;
+}
